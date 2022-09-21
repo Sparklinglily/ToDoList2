@@ -1,0 +1,207 @@
+
+
+:root {
+    --bg: rgb(206, 6, 172);
+    --dark: rgb(1, 1, 2);
+    --blue: rgb(50, 62, 172);
+    --txt: white;
+    --main: rgb(251, 10, 10);
+
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    color: var(--txt);
+    margin: auto auto;
+    border: 12px solid black;
+}
+
+#container {
+    /* overflow: hidden; */
+    max-width: 480px ;
+    background: linear-gradient(rgb(22, 17, 95), var(--bg)) no-repeat;
+    height: 98vh;
+    font-size: 1.1em;
+    font-family: Tahoma;
+    margin:  20px auto;
+    border-radius: 40px;
+    padding: 40px 30px;
+    width: 480px;
+    overflow: hidden;
+    /* transform: scale(.9); */
+}
+
+
+header {
+    z-index: 99;
+    position: fixed;
+    top: 20px;
+    width: 480px;
+    margin-left: -30px;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 80% auto auto;
+    background: var(--dark);
+    padding: 20px;
+    border-radius: 40px 40px 0 0 ;
+}
+
+section > div {
+    width: 180px;
+    height: 80px;
+    background: var(--blue);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.753);
+
+    line-height: 2px;
+    font-size: .6em;
+}
+
+section {
+    display: flex;
+    width: min-content;
+}
+
+section h5 {
+    color: grey;
+    font-weight: lighter;
+}
+
+section hr {
+    border: 2px  solid var(--main);
+    border-radius: 40px;
+    border-right: 200px solid var(--txt);
+    border-right: 20px solid var(--txt);
+}
+
+h1 {
+    margin:  30px 10px;
+    text-shadow: 0 0 12px black;
+    font-weight: 100;
+    font-size: 1.4em;
+}
+
+h4 {
+    letter-spacing: 3px;
+    font-weight: lighter;
+    position: relative;
+    left: 10px;
+}
+
+
+#lists ul {
+    list-style: none;
+}
+
+#lists li {
+    background: midnightblue;
+    width: 350px;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-columns: 25% auto;
+
+}
+
+ .circle {
+    height: 40px;
+    width: 40px;
+    border: 2px solid magenta;
+    border-radius: 50px;
+
+    position: relative;
+    top: 8px;
+    left: 10px;
+} 
+
+.checked .circle::before {
+    content:'\2714';
+    position: relative;
+    left: 10px;
+    top: 5px;
+}
+
+.checked p {
+    text-decoration: line-through;
+}
+
+li.checked {
+    opacity: .5;
+}
+
+.checked .circle {
+    background: rgb(61, 61, 226);
+}
+
+#lists li:nth-of-type(even) .circle{
+    border-color: red;
+}
+
+
+button {
+    color: white;
+    background: magenta;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    font-size: 3em;
+
+    border: none;
+    box-shadow: 0 0 15px rgba(19, 8, 8, 0.383);
+
+    position: relative;
+    top: 35%;
+    left: 350px;
+    bottom: 10px;
+}
+
+button:hover {
+    background: rgba(255, 0, 255, 0.767);
+    transform: scale(1.1);
+}
+
+button:active {
+    background: rgba(255, 0, 255, 0.616);
+    transform: scale(.9);
+}
+
+#new_item {
+    background: silver;
+
+    position: fixed;
+    z-index: 999;
+    width: 400px;
+    height: 120px;
+    top: 40%;
+
+    display: none;
+
+    background: var(--main);
+}
+
+input[type=text] {
+    width: 90%;
+    height: 50px;
+    margin: -30px 20px;
+    outline: none;
+    border: none;
+}
+
+input[type=button] {
+    position: relative;
+    top: -80px;
+    left: 76.5%;
+
+    padding: 10px 20px;
+}

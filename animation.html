@@ -1,0 +1,170 @@
+<html lang="en">
+<head>
+    <title>Mad Animation</title>
+
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background: rgb(100, 95, 95);
+        color: white;
+    }
+
+    h1 {
+        font: 2.8em bolder, Tahoma;
+        position: relative;
+        left: 290px;
+        top: -5px;
+        /* border: 2px solid; */
+        width: 270px;
+        overflow-x: hidden;
+        z-index: 1;
+        
+        animation-name: moveLeft;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+
+        animation-fill-mode: forwards;
+
+    }
+
+    #container {
+        position: relative;
+        top: 45%;
+        width: 600px;
+        margin: auto;
+
+        transform: scale(1.8);
+        border: 2px solid;
+    }
+
+    #container > div {
+        margin-left: 5% ;
+    }
+
+    .line {
+        width: 10px;
+        height: 60px;
+        background: url(bg.jpg);
+
+        position: absolute;
+        top: 23px;
+        left: 54%;
+
+        z-index: 5;
+        background-position: 20px 50px;
+        background-size: 200px 200px;
+        transition: all 100s ease;
+        animation: lineBg 2s  ease-in alternate forwards ;
+    }
+
+
+    .cover {
+        width: 278px;
+        height: 65px;
+        background: rgb(100, 95, 95);
+
+        position: absolute;
+        top: 22px;
+        left: 53%;
+
+        z-index: 2;
+    }
+    /* .cover2 {
+        width: 250px;
+        height: 65px;
+        background: rgb(0, 0, 0);
+
+        position: absolute;
+        top: 22px;
+        left: 14%;
+
+        z-index: 4;
+    } */
+
+    section {
+        position: absolute;
+        top: 28px;
+        left: 55%;
+        padding-left: 20px;
+
+        height: 0;
+        overflow: hidden;
+
+        font-family: Verdana;
+        line-height: 25px;
+        word-spacing: 5px;
+        letter-spacing: 5px;
+        /* width: 280px; */
+
+        z-index: 3;
+
+        border: 2px solid red;
+        
+        animation: slideDown 2s ease-out;
+    }
+
+
+
+
+
+    /* ANIMATION */
+
+    @keyframes moveLeft {
+        
+        
+        to {
+            left: 20px;
+        }
+    }
+
+
+    @keyframes lineBg {
+
+        0% {
+
+        }
+
+        100% {
+            background-size: 400px 300px;
+            /* background-position: 20px 50px; */
+        }
+        
+    }
+
+    @keyframes slideDown {
+            to {
+                height: 20px;
+            }
+    }
+
+
+</style>
+
+</head>
+<body>
+<div id="container">
+
+    <div>
+        
+        <h1>PINFO TECH </h1>
+        
+        <div class="line"></div>
+        
+        <div class="cover"></div>
+        <!-- <div class="cover2"></div> -->
+        
+        <section>
+            CREATIVE <br>
+            SLIDE DESIGN
+        </section>
+        
+    </div>
+    
+</div>
+</body>
+</html>
